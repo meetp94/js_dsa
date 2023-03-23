@@ -1,0 +1,54 @@
+<!--understand issue and solve with whiteboard
+    make array, define the postion
+    Use loop to insert new element
+    Insert element with text input and button
+    insert Element by default function
+    FOR LAST TASK WE CAN USE splice()
+    data.splice(postion number, want to delete ; which number)
+    data.splice(1,0,65)
+
+
+-->
+
+    <html>
+        <head>
+            <title>Inserts</title>
+            <script>
+                let data = [60,70,80,90];
+                //let newEl = 65;
+                let position = 1;
+                /*
+                for(let i=data.length-1;i>=0;i--){
+                    //console.log(i)
+                    if(i>=position){
+                        data[i+1]= data[i];
+                        if(i==position)
+                        {
+                            data[i]=newEl;
+                        }
+                    }
+                }
+                console.log(data)
+                */
+                function insertElement(){
+                   let entredValue = document.getElementById("insEl").value;
+                   for(let i=data.length-1;i>=0;i--){
+                        if(i>=position){
+                            data[i+1]= data[i];
+                            if (i == position)
+                            {
+                                data[i] = entredValue;
+                            }
+                        }
+                   }
+                   alert(data)
+                }
+            </script>
+        </head>
+       
+        <body>
+            <input type="text" id="insEl"/>
+            <button onclick="insertElement()">Add me</button>
+            
+        </body>
+    </html>
