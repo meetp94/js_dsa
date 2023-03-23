@@ -25,7 +25,7 @@
         
         function getElement(){
             let entredValue = document.getElementById("element").value;
-            if(entredValue <= data.length){
+            if(entredValue <= data.length && entredValue >= 0 && typeof parseInt(entredValue)=== "number"){
             alert(data[entredValue]);
             }else{
                 alert("Please Enter Valid value")
