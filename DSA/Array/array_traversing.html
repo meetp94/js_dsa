@@ -1,0 +1,42 @@
+<!--
+    Make a html page
+    Traversing with loop
+    Accessing elements
+    Access element with text input and button
+    Validations
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Array traversing and accessing</title>
+    <script>
+        let  data = [5,7,8,9,12,34,45,67,89,56,78,65,78,67];
+
+        //for(let i =0; i<data.length;i++){
+         //       document.write(`Index value is ${i} data is ${data[i]} <br>`)
+        //}
+        // let x = 3
+        //document.write(data[x]);
+
+        //
+
+        
+        function getElement(){
+            let entredValue = document.getElementById("element").value;
+            if(entredValue <= data.length){
+            alert(data[entredValue]);
+            }else{
+                alert("Please Enter Valid value")
+            }
+         
+        }
+
+    </script>
+</head>
+<body>
+   <input type="text" id="element" />
+   <button onclick="getElement()">Get Element</button>
+</body>
+</html>
